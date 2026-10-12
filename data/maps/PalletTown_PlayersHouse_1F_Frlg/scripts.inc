@@ -23,7 +23,9 @@ PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayer::
 	waitmovement 0
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, PalletTown_PlayersHouse_1F_Movement_MomApproachPlayer
 	waitmovement 0
-	msgbox PalletTown_PlayersHouse_1F_Text_MomApproachPlayer, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerMale
+	call_if_eq VAR_RESULT, FEMALE, PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerFemale
 	closemessage
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, PalletTown_PlayersHouse_1F_Movement_MomReturn
 	waitmovement 0
@@ -99,8 +101,22 @@ PalletTown_PlayersHouse_1F_EventScript_TVScreenFemale::
 	msgbox PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad
 	return
 
-PalletTown_PlayersHouse_1F_Text_MomApproachPlayer::
-	.string "Vagabondo brinzellone!\n"
+PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerMale::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomApproachPlayerMale, MSGBOX_DEFAULT
+	return
+
+PalletTown_PlayersHouse_1F_Text_MomApproachPlayerMale::
+	.string "MAMMA: Vagabondo brinzellone!\n"
+	.string "Ma ti sembra l'ora di svegliarsi?\l"
+	.string "Massimo è passato a lasciare un pacco,\p"
+	.string "passa dalle poste per piacere.$"
+
+PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerFemale::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomApproachPlayerFemale, MSGBOX_DEFAULT
+	return
+
+PalletTown_PlayersHouse_1F_Text_MomApproachPlayerFemale::
+	.string "MAMMA: Vagabonda brinzellona!\n"
 	.string "Ma ti sembra l'ora di svegliarsi?\l"
 	.string "Massimo è passato a lasciare un pacco,\p"
 	.string "passa dalle poste per piacere.$"
