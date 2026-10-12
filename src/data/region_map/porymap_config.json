@@ -1,0 +1,99 @@
+{
+    "region_maps": [
+        {
+            "alias": "hoenn",
+            "tilemap": {
+                "width": 64,
+                "height": 64,
+                "format": "plain",
+                "tileset_path": "graphics/pokenav/region_map/map.png",
+                "tilemap_path": "graphics/pokenav/region_map/map.bin",
+                "palette": "graphics/pokenav/region_map/map.pal"
+            },
+            "layout": {
+                "width": 28,
+                "height": 15,
+                "offset_left": 1,
+                "offset_top": 2,
+                "format": "C array",
+                "path": "src/data/region_map/region_map_layout.h"
+            }
+        },
+        {
+            "alias": "kanto",
+            "tilemap": {
+                "width": 64,
+                "height": 64,
+                "format": "plain",
+                "tileset_path": "graphics/pokenav/region_map/map_kanto.png",
+                "tilemap_path": "graphics/pokenav/region_map/map_kanto.bin",
+                "palette": "graphics/pokenav/region_map/map_kanto.pal"
+            },
+            "layout": {
+                "width": 28,
+                "height": 15,
+                "offset_left": 1,
+                "offset_top": 2,
+                "format": "C array",
+                "path": "src/data/region_map/region_map_layout_kanto.h"
+            }
+        },
+        {
+            "alias": "sevii_123",
+            "tilemap": {
+                "width": 64,
+                "height": 64,
+                "format": "plain",
+                "tileset_path": "graphics/pokenav/region_map/map_sevii_123.png",
+                "tilemap_path": "graphics/pokenav/region_map/map_sevii_123.bin",
+                "palette": "graphics/pokenav/region_map/map_sevii_123.pal"
+            },
+            "layout": {
+                "width": 28,
+                "height": 15,
+                "offset_left": 1,
+                "offset_top": 2,
+                "format": "C array",
+                "path": "src/data/region_map/region_map_layout_sevii123.h"
+            }
+        },
+        {
+            "alias": "sevii_45",
+            "tilemap": {
+                "width": 64,
+                "height": 64,
+                "format": "plain",
+                "tileset_path": "graphics/pokenav/region_map/map_sevii_45.png",
+                "tilemap_path": "graphics/pokenav/region_map/map_sevii_45.bin",
+                "palette": "graphics/pokenav/region_map/map_sevii_45.pal"
+            },
+            "layout": {
+                "width": 28,
+                "height": 15,
+                "offset_left": 1,
+                "offset_top": 2,
+                "format": "C array",
+                "path": "src/data/region_map/region_map_layout_sevii45.h"
+            }
+        },
+        {
+            "alias": "sevii_67",
+            "tilemap": {
+                "width": 64,
+                "height": 64,
+                "format": "plain",
+                "tileset_path": "graphics/pokenav/region_map/map_sevii_67.png",
+                "tilemap_path": "graphics/pokenav/region_map/map_sevii_67.bin",
+                "palette": "graphics/pokenav/region_map/map_sevii_67.pal"
+            },
+            "layout": {
+                "width": 28,
+                "height": 15,
+                "offset_left": 1,
+                "offset_top": 2,
+                "format": "C array",
+                "path": "src/data/region_map/region_map_layout_sevii67.h"
+            }
+        }
+    ]
+}
