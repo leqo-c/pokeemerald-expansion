@@ -1,5 +1,51 @@
 PalletTown_PlayersHouse_1F_Frlg_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_PlayersHouse_1F_OnFrame
 	.byte 0
+
+PalletTown_PlayersHouse_1F_OnFrame:
+	map_script_2 VAR_TEMP_0, 0, PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerOnEntry
+	.2byte 0
+
+PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerOnEntry::
+	setvar VAR_TEMP_0, 1
+	goto_if_set FLAG_MET_MOM_IN_PLAYERS_HOUSE_1F, PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerDone
+	goto PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayer
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayer::
+	lockall
+	goto_if_set FLAG_MET_MOM_IN_PLAYERS_HOUSE_1F, PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerDone
+	setflag FLAG_MET_MOM_IN_PLAYERS_HOUSE_1F
+	playse SE_PIN
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, PalletTown_PlayersHouse_1F_Movement_MomApproachPlayer
+	waitmovement 0
+	msgbox PalletTown_PlayersHouse_1F_Text_MomApproachPlayer, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, PalletTown_PlayersHouse_1F_Movement_MomReturn
+	waitmovement 0
+	releaseall
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomApproachPlayerDone::
+	releaseall
+	end
+
+PalletTown_PlayersHouse_1F_Movement_MomApproachPlayer::
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+PalletTown_PlayersHouse_1F_Movement_MomReturn::
+	walk_left
+	walk_down
+	walk_down
+	face_left
+	step_end
 
 PalletTown_PlayersHouse_1F_EventScript_Mom::
 	lock
@@ -52,6 +98,12 @@ PalletTown_PlayersHouse_1F_EventScript_TVScreenMale::
 PalletTown_PlayersHouse_1F_EventScript_TVScreenFemale::
 	msgbox PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad
 	return
+
+PalletTown_PlayersHouse_1F_Text_MomApproachPlayer::
+	.string "Vagabondo brinzellone!\n"
+	.string "Ma ti sembra l'ora di svegliarsi?\l"
+	.string "Massimo è passato a lasciare un pacco,\p"
+	.string "passa dalle poste per piacere.$"
 
 PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
 	.string "MOM: …Right.\n"
