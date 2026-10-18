@@ -418,6 +418,8 @@ extern const u16 gItemIconPalette_BeastBall[];
 extern const u32 gItemIcon_CherishBall[];
 extern const u16 gItemIconPalette_CherishBall[];
 // Medicine
+extern const u32 gItemIcon_Succhino[];
+extern const u16 gItemIconPalette_Succhino[];
 extern const u32 gItemIcon_Potion[];
 extern const u16 gItemIconPalette_Potion[];
 extern const u16 gItemIconPalette_SuperPotion[];

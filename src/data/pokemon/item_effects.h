@@ -3,6 +3,11 @@ const u8 gItemEffect_Potion[7] = {
     [6] = 20, // Amount of HP to recover
 };
 
+const u8 gItemEffect_Succhino[7] = {
+    [4] = ITEM4_HEAL_HP,
+    [6] = 55, // Amount of HP to recover
+};
+
 const u8 gItemEffect_Antidote[6] = {
     [3] = ITEM3_POISON,
 };

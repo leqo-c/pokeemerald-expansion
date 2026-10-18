@@ -90,6 +90,8 @@ const u32 gItemIcon_CherishBall[] = INCGFX_U32("graphics/items/icons/cherish_bal
 const u16 gItemIconPalette_CherishBall[] = INCGFX_U16("graphics/items/icon_palettes/cherish_ball.pal", ".gbapal");
 
 // Medicine
+const u32 gItemIcon_Succhino[] = INCGFX_U32("graphics/items/icons/succo_yoga.png", ".4bpp.smol");
+const u16 gItemIconPalette_Succhino[] = INCGFX_U16("graphics/items/icon_palettes/succo_yoga.pal", ".gbapal");
 
 const u32 gItemIcon_Potion[] = INCGFX_U32("graphics/items/icons/potion.png", ".4bpp.smol");
 const u16 gItemIconPalette_Potion[] = INCGFX_U16("graphics/items/icon_palettes/potion.pal", ".gbapal");

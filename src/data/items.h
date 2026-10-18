@@ -515,6 +515,25 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Potion,
     },
 
+    [ITEM_SUCCHINO] =
+    {
+        .name = ITEM_NAME("Succhino"),
+        .price = 300,
+        .description = COMPOUND_STRING(
+            "Buon succo che\n"
+            "ristabilisce 55 PV\n"
+            "di un Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HEALTH_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_RESTORE_HP,
+        .effect = gItemEffect_Succhino,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Succhino,
+        .iconPalette = gItemIconPalette_Succhino,
+    },
+
     [ITEM_SUPER_POTION] =
     {
         .name = ITEM_NAME("Super Potion"),
